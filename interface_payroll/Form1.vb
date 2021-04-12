@@ -247,6 +247,8 @@
         If Me.rad_isole.Checked Then
             Me.lbl_red_prp_isole.Text = 26
             reduc_prp = reduc_prp + 26
+        Else
+            Me.lbl_red_prp_isole.Text = 0
         End If
         ' enfants à charge
         nbr_enfants = CInt(Me.txt_nbr_enfants.Text) + CInt(Me.txt_nbr_enf_handic.Text)
@@ -440,6 +442,10 @@
     End Sub
 
     Private Sub lbl_heures_prestees_et_assimilees_Click(sender As Object, e As EventArgs) Handles lbl_heures_prestees_et_assimilees.Click
+
+    End Sub
+
+    Private Sub lbl_red_prp_isole_Click(sender As Object, e As EventArgs) Handles lbl_red_prp_isole.Click
 
     End Sub
 End Class

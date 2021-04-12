@@ -47,9 +47,12 @@ Partial Class form_payroll
         Me.rad_partiel = New System.Windows.Forms.RadioButton()
         Me.rad_plein = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lbl_nbre_jours_prestes_et_assimiles_J = New System.Windows.Forms.Label()
+        Me.lbl_nbr_jrs_prestables_D = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lbl_heures_prestees_et_assimilees = New System.Windows.Forms.Label()
         Me.txt_heures_prestables_U = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -119,10 +122,7 @@ Partial Class form_payroll
         Me.txt_remun_ouv = New System.Windows.Forms.TextBox()
         Me.lbl_nbr_jours_P = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.lbl_nbr_jrs_prestables_D = New System.Windows.Forms.Label()
-        Me.lbl_heures_prestees_et_assimilees = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.lbl_nbre_jours_prestes_et_assimiles_J = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -393,6 +393,24 @@ Partial Class form_payroll
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Prestations jours"
         '
+        'lbl_nbre_jours_prestes_et_assimiles_J
+        '
+        Me.lbl_nbre_jours_prestes_et_assimiles_J.AutoSize = True
+        Me.lbl_nbre_jours_prestes_et_assimiles_J.Location = New System.Drawing.Point(131, 25)
+        Me.lbl_nbre_jours_prestes_et_assimiles_J.Name = "lbl_nbre_jours_prestes_et_assimiles_J"
+        Me.lbl_nbre_jours_prestes_et_assimiles_J.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbre_jours_prestes_et_assimiles_J.TabIndex = 17
+        Me.lbl_nbre_jours_prestes_et_assimiles_J.Text = "0"
+        '
+        'lbl_nbr_jrs_prestables_D
+        '
+        Me.lbl_nbr_jrs_prestables_D.AutoSize = True
+        Me.lbl_nbr_jrs_prestables_D.Location = New System.Drawing.Point(131, 48)
+        Me.lbl_nbr_jrs_prestables_D.Name = "lbl_nbr_jrs_prestables_D"
+        Me.lbl_nbr_jrs_prestables_D.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_jrs_prestables_D.TabIndex = 16
+        Me.lbl_nbr_jrs_prestables_D.Text = "0"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -423,6 +441,15 @@ Partial Class form_payroll
         Me.GroupBox5.TabIndex = 5
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Prestations heures"
+        '
+        'lbl_heures_prestees_et_assimilees
+        '
+        Me.lbl_heures_prestees_et_assimilees.AutoSize = True
+        Me.lbl_heures_prestees_et_assimilees.Location = New System.Drawing.Point(130, 19)
+        Me.lbl_heures_prestees_et_assimilees.Name = "lbl_heures_prestees_et_assimilees"
+        Me.lbl_heures_prestees_et_assimilees.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_heures_prestees_et_assimilees.TabIndex = 17
+        Me.lbl_heures_prestees_et_assimilees.Text = "0"
         '
         'txt_heures_prestables_U
         '
@@ -1114,24 +1141,6 @@ Partial Class form_payroll
         Me.Label34.TabIndex = 13
         Me.Label34.Text = "Jrs prestés P"
         '
-        'lbl_nbr_jrs_prestables_D
-        '
-        Me.lbl_nbr_jrs_prestables_D.AutoSize = True
-        Me.lbl_nbr_jrs_prestables_D.Location = New System.Drawing.Point(131, 48)
-        Me.lbl_nbr_jrs_prestables_D.Name = "lbl_nbr_jrs_prestables_D"
-        Me.lbl_nbr_jrs_prestables_D.Size = New System.Drawing.Size(13, 13)
-        Me.lbl_nbr_jrs_prestables_D.TabIndex = 16
-        Me.lbl_nbr_jrs_prestables_D.Text = "0"
-        '
-        'lbl_heures_prestees_et_assimilees
-        '
-        Me.lbl_heures_prestees_et_assimilees.AutoSize = True
-        Me.lbl_heures_prestees_et_assimilees.Location = New System.Drawing.Point(130, 19)
-        Me.lbl_heures_prestees_et_assimilees.Name = "lbl_heures_prestees_et_assimilees"
-        Me.lbl_heures_prestees_et_assimilees.Size = New System.Drawing.Size(13, 13)
-        Me.lbl_heures_prestees_et_assimilees.TabIndex = 17
-        Me.lbl_heures_prestees_et_assimilees.Text = "0"
-        '
         'Label33
         '
         Me.Label33.AutoSize = True
@@ -1140,15 +1149,6 @@ Partial Class form_payroll
         Me.Label33.Size = New System.Drawing.Size(94, 13)
         Me.Label33.TabIndex = 11
         Me.Label33.Text = "Heures prestées P"
-        '
-        'lbl_nbre_jours_prestes_et_assimiles_J
-        '
-        Me.lbl_nbre_jours_prestes_et_assimiles_J.AutoSize = True
-        Me.lbl_nbre_jours_prestes_et_assimiles_J.Location = New System.Drawing.Point(131, 25)
-        Me.lbl_nbre_jours_prestes_et_assimiles_J.Name = "lbl_nbre_jours_prestes_et_assimiles_J"
-        Me.lbl_nbre_jours_prestes_et_assimiles_J.Size = New System.Drawing.Size(13, 13)
-        Me.lbl_nbre_jours_prestes_et_assimiles_J.TabIndex = 17
-        Me.lbl_nbre_jours_prestes_et_assimiles_J.Text = "0"
         '
         'form_payroll
         '
