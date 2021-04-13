@@ -3,6 +3,9 @@
     ' Un Git repository a été créé pour la sauvegarde des fichiers / dossiers
     ' test repo
 
+    '-----------------------------------------------------------------------  A FAIRE ------------------------------------
+    ' faire le test sur fortemps/janvier car le R ne tombe pas juste
+
     Const bonus_R_plancher As Double = 1674.49
     Const bonus_R_plafond As Double = 2611.78
     Const bonus_R_indice_employe As Double = 0.2194
@@ -385,7 +388,7 @@
                     Me.lbl_w.Text = Me.txt_remun_ouv.Text * Me.lbl_nbre_heures_prestees_et_assimilees.Text
                 Else
                     ' brut contrat * heures prestées
-                    MsgBox("cas ouvrier temps plein incomplet ou temps partiel")
+                    Me.lbl_w.Text = txt_remun_ouv.Text * Me.lbl_nbre_heures_prestees_et_assimilees.Text
                 End If
             End If
         End If
