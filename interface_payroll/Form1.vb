@@ -26,13 +26,13 @@
         ' calcul de S suivant les 3 cas possibles
         If Me.rad_plein.Checked Then
             ' si J = D
-            If (Me.lbl_nbr_jours_P.Text = Me.lbl_nbr_jrs_prestables_D.Text) Then
+            If (Me.lbl_nbre_jours_prestes_et_assimiles_J.Text = Me.lbl_nbr_jrs_prestables_D.Text) Then
                 Me.lbl_S.Text = Me.lbl_w.Text
             Else
-                Me.lbl_S.Text = calcul_S_tempsPleinIncomplet(Me.lbl_w.Text, Me.lbl_nbr_jours_P.Text, Me.lbl_nbr_jrs_prestables_D.Text)
+                Me.lbl_S.Text = calcul_S_tempsPleinIncomplet(Me.lbl_w.Text, Me.lbl_nbre_jours_prestes_et_assimiles_J.Text, Me.lbl_nbr_jrs_prestables_D.Text)
             End If
         ElseIf Me.rad_partiel.Checked Then
-            Me.lbl_S.Text = calcul_S_tempsPartiel(Me.lbl_w.Text, Me.lbl_total_p.Text, Me.lbl_hrs_prestables_U.Text)
+            Me.lbl_S.Text = calcul_S_tempsPartiel(Me.lbl_w.Text, Me.lbl_nbr_heures_prestees.Text, Me.lbl_hrs_prestables_U.Text)
         End If
 
         ' calcul de R du travailleur
@@ -43,12 +43,12 @@
         End If
 
         ' calcul de P
-        If Me.rad_plein.Checked And Me.lbl_nbr_jours_P.Text = Me.lbl_nbr_jrs_prestables_D.Text Then
+        If Me.rad_plein.Checked And Me.lbl_nbre_jours_prestes_et_assimiles_J.Text = Me.lbl_nbr_jrs_prestables_D.Text Then
             Me.lbl_bonusP.Text = Me.lbl_bonusR.Text
-        ElseIf Me.rad_plein.Checked And Me.lbl_nbr_jours_P.Text <> Me.lbl_nbr_jrs_prestables_D.Text Then
-            Me.lbl_bonusP.Text = calcul_P_temps_plein_incomplet(Me.lbl_nbr_jours_P.Text, Me.lbl_nbr_jrs_prestables_D.Text, Me.lbl_bonusR.Text)
+        ElseIf Me.rad_plein.Checked And Me.lbl_nbre_jours_prestes_et_assimiles_J.Text <> Me.lbl_nbr_jrs_prestables_D.Text Then
+            Me.lbl_bonusP.Text = calcul_P_temps_plein_incomplet(Me.lbl_nbre_jours_prestes_et_assimiles_J.Text, Me.lbl_nbr_jrs_prestables_D.Text, Me.lbl_bonusR.Text)
         ElseIf Me.rad_partiel.Checked Then
-            Me.lbl_bonusP.Text = calcul_P_temps_partiel(Me.lbl_total_p.Text, Me.lbl_hrs_prestables_U.Text, Me.lbl_bonusR.Text)
+            Me.lbl_bonusP.Text = calcul_P_temps_partiel(Me.lbl_nbr_heures_prestees.Text, Me.lbl_hrs_prestables_U.Text, Me.lbl_bonusR.Text)
         End If
 
         ' calcul du montant imposable
@@ -382,7 +382,7 @@
         Else
             If Me.rad_statut_ouvrier.Checked = True Then
                 If rad_plein.Checked = True Then
-                    Me.lbl_w.Text = Me.txt_remun_ouv.Text * Me.lbl_total_p.Text
+                    Me.lbl_w.Text = Me.txt_remun_ouv.Text * Me.lbl_nbre_heures_prestees_et_assimilees.Text
                 Else
                     ' brut contrat * heures prestées
                     MsgBox("cas ouvrier temps plein incomplet ou temps partiel")

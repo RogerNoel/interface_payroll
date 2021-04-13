@@ -432,7 +432,7 @@
             End Select
         Next
         form_payroll.lbl_nbr_jrs_prestables_D.Text = nbr_jours_ouvrables
-        form_payroll.lbl_heures_prestees_et_assimilees.Text = form_payroll.lbl_total_p.Text
+        form_payroll.lbl_nbre_heures_prestees_et_assimilees.Text = CDbl(form_payroll.lbl_nbr_heures_prestees.Text) + CDbl(form_payroll.lbl_nbr_heures_feries.Text)
         form_payroll.lbl_hrs_prestables_U.Text = nbr_hrs_prestables_D
     End Sub
 
@@ -442,20 +442,28 @@
     ''' </summary>
     Sub comptage_codes()
         Dim textArray() As TextBox = {txt_code_1, txt_code_2, txt_code_3, txt_code_4, txt_code_5, txt_code_6, txt_code_7, txt_code_8, txt_code_9, txt_code_10, txt_code_11, txt_code_12, txt_code_13, txt_code_14, txt_code_15, txt_code_16, txt_code_17, txt_code_18, txt_code_19, txt_code_20, txt_code_21, txt_code_22, txt_code_23, txt_code_24, txt_code_25, txt_code_26, txt_code_27, txt_code_28, txt_code_29, txt_code_30, txt_code_31}
-        Dim P As Integer
-        Dim nbr_P As Integer = 0
+        Dim nbr_heures_prestees_P As Integer = 0
+        Dim nbr_heures_feries_F As Integer = 0
+        Dim nbr_jours_F As Integer = 0
+        Dim nbr_jours_P As Integer = 0
         For i = 1 To 31
             Dim code As String = GroupBox2.Controls("txt_code_" & i).Text
             Select Case code
                 Case "p"
-                    P += GroupBox2.Controls("TextBox" & i).Text
-                    nbr_P += 1
+                    nbr_heures_prestees_P += GroupBox2.Controls("TextBox" & i).Text
+                    nbr_jours_P += 1
+                Case "f"
+                    nbr_jours_F += 1
+                    nbr_heures_feries_F += GroupBox2.Controls("TextBox" & i).Text
                 Case Else
                     'MsgBox("comptage")
             End Select
         Next
-        form_payroll.lbl_total_p.Text = P
-        form_payroll.lbl_nbr_jours_P.Text = nbr_P
+        form_payroll.lbl_nbr_heures_prestees.Text = nbr_heures_prestees_P
+        form_payroll.lbl_nbr_jours_P.Text = nbr_jours_P
+        form_payroll.lbl_nbre_jours_feries.Text = nbr_jours_F
+        form_payroll.lbl_nbre_jours_prestes_et_assimiles_J.Text = nbr_jours_F + nbr_jours_P
+        form_payroll.lbl_nbr_heures_feries.Text = nbr_heures_feries_F
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged

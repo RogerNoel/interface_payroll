@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class form_payroll
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class form_payroll
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.rad_statut_employe = New System.Windows.Forms.RadioButton()
@@ -53,7 +53,7 @@ Partial Class form_payroll
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.lbl_hrs_prestables_U = New System.Windows.Forms.Label()
-        Me.lbl_heures_prestees_et_assimilees = New System.Windows.Forms.Label()
+        Me.lbl_nbre_heures_prestees_et_assimilees = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
@@ -116,13 +116,17 @@ Partial Class form_payroll
         Me.txt_regime_mercredi = New System.Windows.Forms.TextBox()
         Me.txt_regime_mardi = New System.Windows.Forms.TextBox()
         Me.txt_regime_lundi = New System.Windows.Forms.TextBox()
-        Me.lbl_total_p = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.txt_remun_emp = New System.Windows.Forms.TextBox()
         Me.txt_remun_ouv = New System.Windows.Forms.TextBox()
-        Me.lbl_nbr_jours_P = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.lbl_nbre_jours_feries = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_heures_feries = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_heures_prestees = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_jours_P = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -432,7 +436,7 @@ Partial Class form_payroll
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.lbl_hrs_prestables_U)
-        Me.GroupBox5.Controls.Add(Me.lbl_heures_prestees_et_assimilees)
+        Me.GroupBox5.Controls.Add(Me.lbl_nbre_heures_prestees_et_assimilees)
         Me.GroupBox5.Controls.Add(Me.Label7)
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Location = New System.Drawing.Point(674, 12)
@@ -451,14 +455,14 @@ Partial Class form_payroll
         Me.lbl_hrs_prestables_U.TabIndex = 16
         Me.lbl_hrs_prestables_U.Text = "0"
         '
-        'lbl_heures_prestees_et_assimilees
+        'lbl_nbre_heures_prestees_et_assimilees
         '
-        Me.lbl_heures_prestees_et_assimilees.AutoSize = True
-        Me.lbl_heures_prestees_et_assimilees.Location = New System.Drawing.Point(130, 19)
-        Me.lbl_heures_prestees_et_assimilees.Name = "lbl_heures_prestees_et_assimilees"
-        Me.lbl_heures_prestees_et_assimilees.Size = New System.Drawing.Size(13, 13)
-        Me.lbl_heures_prestees_et_assimilees.TabIndex = 17
-        Me.lbl_heures_prestees_et_assimilees.Text = "0"
+        Me.lbl_nbre_heures_prestees_et_assimilees.AutoSize = True
+        Me.lbl_nbre_heures_prestees_et_assimilees.Location = New System.Drawing.Point(130, 19)
+        Me.lbl_nbre_heures_prestees_et_assimilees.Name = "lbl_nbre_heures_prestees_et_assimilees"
+        Me.lbl_nbre_heures_prestees_et_assimilees.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbre_heures_prestees_et_assimilees.TabIndex = 17
+        Me.lbl_nbre_heures_prestees_et_assimilees.Text = "0"
         '
         'Label7
         '
@@ -1084,15 +1088,6 @@ Partial Class form_payroll
         Me.txt_regime_lundi.TabIndex = 1
         Me.txt_regime_lundi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'lbl_total_p
-        '
-        Me.lbl_total_p.AutoSize = True
-        Me.lbl_total_p.Location = New System.Drawing.Point(1043, 583)
-        Me.lbl_total_p.Name = "lbl_total_p"
-        Me.lbl_total_p.Size = New System.Drawing.Size(13, 13)
-        Me.lbl_total_p.TabIndex = 12
-        Me.lbl_total_p.Text = "0"
-        '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.txt_remun_emp)
@@ -1124,42 +1119,91 @@ Partial Class form_payroll
         Me.txt_remun_ouv.Text = "0"
         Me.txt_remun_ouv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'lbl_nbr_jours_P
+        'Label35
         '
-        Me.lbl_nbr_jours_P.AutoSize = True
-        Me.lbl_nbr_jours_P.Location = New System.Drawing.Point(744, 583)
-        Me.lbl_nbr_jours_P.Name = "lbl_nbr_jours_P"
-        Me.lbl_nbr_jours_P.Size = New System.Drawing.Size(13, 13)
-        Me.lbl_nbr_jours_P.TabIndex = 14
-        Me.lbl_nbr_jours_P.Text = "0"
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(1027, 494)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(48, 13)
+        Me.Label35.TabIndex = 15
+        Me.Label35.Text = "Jrs fériés"
         '
-        'Label34
+        'lbl_nbre_jours_feries
         '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(674, 583)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(67, 13)
-        Me.Label34.TabIndex = 13
-        Me.Label34.Text = "Jrs prestés P"
+        Me.lbl_nbre_jours_feries.AutoSize = True
+        Me.lbl_nbre_jours_feries.Location = New System.Drawing.Point(1084, 494)
+        Me.lbl_nbre_jours_feries.Name = "lbl_nbre_jours_feries"
+        Me.lbl_nbre_jours_feries.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbre_jours_feries.TabIndex = 16
+        Me.lbl_nbre_jours_feries.Text = "0"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(1122, 494)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(49, 13)
+        Me.Label36.TabIndex = 17
+        Me.Label36.Text = "hrs feries"
+        '
+        'lbl_nbr_heures_feries
+        '
+        Me.lbl_nbr_heures_feries.AutoSize = True
+        Me.lbl_nbr_heures_feries.Location = New System.Drawing.Point(1195, 494)
+        Me.lbl_nbr_heures_feries.Name = "lbl_nbr_heures_feries"
+        Me.lbl_nbr_heures_feries.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_heures_feries.TabIndex = 18
+        Me.lbl_nbr_heures_feries.Text = "0"
         '
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(943, 583)
+        Me.Label33.Location = New System.Drawing.Point(1116, 477)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(94, 13)
         Me.Label33.TabIndex = 11
         Me.Label33.Text = "Heures prestées P"
         '
+        'lbl_nbr_heures_prestees
+        '
+        Me.lbl_nbr_heures_prestees.AutoSize = True
+        Me.lbl_nbr_heures_prestees.Location = New System.Drawing.Point(1216, 477)
+        Me.lbl_nbr_heures_prestees.Name = "lbl_nbr_heures_prestees"
+        Me.lbl_nbr_heures_prestees.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_heures_prestees.TabIndex = 12
+        Me.lbl_nbr_heures_prestees.Text = "0"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(1027, 477)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(67, 13)
+        Me.Label34.TabIndex = 13
+        Me.Label34.Text = "Jrs prestés P"
+        '
+        'lbl_nbr_jours_P
+        '
+        Me.lbl_nbr_jours_P.AutoSize = True
+        Me.lbl_nbr_jours_P.Location = New System.Drawing.Point(1097, 477)
+        Me.lbl_nbr_jours_P.Name = "lbl_nbr_jours_P"
+        Me.lbl_nbr_jours_P.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_jours_P.TabIndex = 14
+        Me.lbl_nbr_jours_P.Text = "0"
+        '
         'form_payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1233, 646)
+        Me.ClientSize = New System.Drawing.Size(1267, 646)
+        Me.Controls.Add(Me.lbl_nbr_heures_feries)
+        Me.Controls.Add(Me.Label36)
+        Me.Controls.Add(Me.lbl_nbre_jours_feries)
+        Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.lbl_nbr_jours_P)
         Me.Controls.Add(Me.Label34)
         Me.Controls.Add(Me.GroupBox10)
-        Me.Controls.Add(Me.lbl_total_p)
+        Me.Controls.Add(Me.lbl_nbr_heures_prestees)
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.groupBox_regime_hebdo)
         Me.Controls.Add(Me.btn_calendrier_afficher)
@@ -1290,16 +1334,20 @@ Partial Class form_payroll
     Friend WithEvents txt_regime_lundi As TextBox
     Friend WithEvents Label32 As Label
     Friend WithEvents txt_regime_dimanche As TextBox
-    Friend WithEvents lbl_total_p As Label
     Friend WithEvents GroupBox10 As GroupBox
     Friend WithEvents txt_remun_emp As TextBox
     Friend WithEvents txt_remun_ouv As TextBox
     Friend WithEvents lbl_w As Label
-    Friend WithEvents lbl_nbr_jours_P As Label
-    Friend WithEvents Label34 As Label
     Friend WithEvents lbl_nbr_jrs_prestables_D As Label
-    Friend WithEvents lbl_heures_prestees_et_assimilees As Label
-    Friend WithEvents Label33 As Label
+    Friend WithEvents lbl_nbre_heures_prestees_et_assimilees As Label
     Friend WithEvents lbl_nbre_jours_prestes_et_assimiles_J As Label
     Friend WithEvents lbl_hrs_prestables_U As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents lbl_nbre_jours_feries As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents lbl_nbr_heures_feries As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents lbl_nbr_heures_prestees As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents lbl_nbr_jours_P As Label
 End Class
