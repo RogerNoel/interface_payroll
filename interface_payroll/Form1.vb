@@ -439,11 +439,4 @@
         affichage_remun_txt()
     End Sub
 
-    Private Sub lbl_heures_prestees_et_assimilees_Click(sender As Object, e As EventArgs) Handles lbl_heures_prestees_et_assimilees.Click
-
-    End Sub
-
-    Private Sub lbl_red_prp_isole_Click(sender As Object, e As EventArgs) Handles lbl_red_prp_isole.Click
-
-    End Sub
 End Class

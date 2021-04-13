@@ -52,6 +52,7 @@ Partial Class form_payroll
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lbl_hrs_prestables_U = New System.Windows.Forms.Label()
         Me.lbl_heures_prestees_et_assimilees = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -122,8 +123,6 @@ Partial Class form_payroll
         Me.lbl_nbr_jours_P = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.lbl_hrs_prestables_U = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -190,7 +189,7 @@ Partial Class form_payroll
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Location = New System.Drawing.Point(794, 93)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(234, 245)
+        Me.GroupBox2.Size = New System.Drawing.Size(217, 245)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Calculs base"
@@ -443,6 +442,15 @@ Partial Class form_payroll
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Prestations heures"
         '
+        'lbl_hrs_prestables_U
+        '
+        Me.lbl_hrs_prestables_U.AutoSize = True
+        Me.lbl_hrs_prestables_U.Location = New System.Drawing.Point(130, 42)
+        Me.lbl_hrs_prestables_U.Name = "lbl_hrs_prestables_U"
+        Me.lbl_hrs_prestables_U.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_hrs_prestables_U.TabIndex = 16
+        Me.lbl_hrs_prestables_U.Text = "0"
+        '
         'lbl_heures_prestees_et_assimilees
         '
         Me.lbl_heures_prestees_et_assimilees.AutoSize = True
@@ -484,7 +492,7 @@ Partial Class form_payroll
         Me.GroupBox6.Controls.Add(Me.Label13)
         Me.GroupBox6.Location = New System.Drawing.Point(794, 344)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(234, 181)
+        Me.GroupBox6.Size = New System.Drawing.Size(220, 181)
         Me.GroupBox6.TabIndex = 9
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Précompte base"
@@ -1143,30 +1151,11 @@ Partial Class form_payroll
         Me.Label33.TabIndex = 11
         Me.Label33.Text = "Heures prestées P"
         '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(1109, 361)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(83, 13)
-        Me.Label35.TabIndex = 15
-        Me.Label35.Text = "hrs prestables U"
-        '
-        'lbl_hrs_prestables_U
-        '
-        Me.lbl_hrs_prestables_U.AutoSize = True
-        Me.lbl_hrs_prestables_U.Location = New System.Drawing.Point(130, 42)
-        Me.lbl_hrs_prestables_U.Name = "lbl_hrs_prestables_U"
-        Me.lbl_hrs_prestables_U.Size = New System.Drawing.Size(13, 13)
-        Me.lbl_hrs_prestables_U.TabIndex = 16
-        Me.lbl_hrs_prestables_U.Text = "0"
-        '
         'form_payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1233, 646)
-        Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.lbl_nbr_jours_P)
         Me.Controls.Add(Me.Label34)
         Me.Controls.Add(Me.GroupBox10)
@@ -1312,6 +1301,5 @@ Partial Class form_payroll
     Friend WithEvents lbl_heures_prestees_et_assimilees As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents lbl_nbre_jours_prestes_et_assimiles_J As Label
-    Friend WithEvents Label35 As Label
     Friend WithEvents lbl_hrs_prestables_U As Label
 End Class
