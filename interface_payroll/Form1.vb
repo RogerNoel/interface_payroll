@@ -32,7 +32,7 @@
                 Me.lbl_S.Text = calcul_S_tempsPleinIncomplet(Me.lbl_w.Text, Me.lbl_nbr_jours_P.Text, Me.lbl_nbr_jrs_prestables_D.Text)
             End If
         ElseIf Me.rad_partiel.Checked Then
-            Me.lbl_S.Text = calcul_S_tempsPartiel(Me.lbl_w.Text, Me.lbl_total_p.Text, Me.txt_heures_prestables_U.Text)
+            Me.lbl_S.Text = calcul_S_tempsPartiel(Me.lbl_w.Text, Me.lbl_total_p.Text, Me.lbl_hrs_prestables_U.Text)
         End If
 
         ' calcul de R du travailleur
@@ -48,7 +48,7 @@
         ElseIf Me.rad_plein.Checked And Me.lbl_nbr_jours_P.Text <> Me.lbl_nbr_jrs_prestables_D.Text Then
             Me.lbl_bonusP.Text = calcul_P_temps_plein_incomplet(Me.lbl_nbr_jours_P.Text, Me.lbl_nbr_jrs_prestables_D.Text, Me.lbl_bonusR.Text)
         ElseIf Me.rad_partiel.Checked Then
-            Me.lbl_bonusP.Text = calcul_P_temps_partiel(Me.lbl_total_p.Text, Me.txt_heures_prestables_U.Text, Me.lbl_bonusR.Text)
+            Me.lbl_bonusP.Text = calcul_P_temps_partiel(Me.lbl_total_p.Text, Me.lbl_hrs_prestables_U.Text, Me.lbl_bonusR.Text)
         End If
 
         ' calcul du montant imposable
@@ -364,9 +364,7 @@
     ''' <remarks></remarks>
     Function verification_non_vide()
         Dim verifOK As Boolean = True
-        If Me.txt_heures_prestables_U.Text Is Nothing Or Not IsNumeric(Me.txt_heures_prestables_U.Text) Then
-            verifOK = False
-        End If
+
         Return verifOK
     End Function
 

@@ -53,7 +53,6 @@ Partial Class form_payroll
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.lbl_heures_prestees_et_assimilees = New System.Windows.Forms.Label()
-        Me.txt_heures_prestables_U = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
@@ -123,6 +122,8 @@ Partial Class form_payroll
         Me.lbl_nbr_jours_P = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.lbl_hrs_prestables_U = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -431,8 +432,8 @@ Partial Class form_payroll
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.lbl_hrs_prestables_U)
         Me.GroupBox5.Controls.Add(Me.lbl_heures_prestees_et_assimilees)
-        Me.GroupBox5.Controls.Add(Me.txt_heures_prestables_U)
         Me.GroupBox5.Controls.Add(Me.Label7)
         Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Location = New System.Drawing.Point(674, 12)
@@ -450,14 +451,6 @@ Partial Class form_payroll
         Me.lbl_heures_prestees_et_assimilees.Size = New System.Drawing.Size(13, 13)
         Me.lbl_heures_prestees_et_assimilees.TabIndex = 17
         Me.lbl_heures_prestees_et_assimilees.Text = "0"
-        '
-        'txt_heures_prestables_U
-        '
-        Me.txt_heures_prestables_U.Location = New System.Drawing.Point(135, 48)
-        Me.txt_heures_prestables_U.Name = "txt_heures_prestables_U"
-        Me.txt_heures_prestables_U.Size = New System.Drawing.Size(61, 20)
-        Me.txt_heures_prestables_U.TabIndex = 3
-        Me.txt_heures_prestables_U.Text = "0"
         '
         'Label7
         '
@@ -1150,11 +1143,30 @@ Partial Class form_payroll
         Me.Label33.TabIndex = 11
         Me.Label33.Text = "Heures prestées P"
         '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(1109, 361)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(83, 13)
+        Me.Label35.TabIndex = 15
+        Me.Label35.Text = "hrs prestables U"
+        '
+        'lbl_hrs_prestables_U
+        '
+        Me.lbl_hrs_prestables_U.AutoSize = True
+        Me.lbl_hrs_prestables_U.Location = New System.Drawing.Point(130, 42)
+        Me.lbl_hrs_prestables_U.Name = "lbl_hrs_prestables_U"
+        Me.lbl_hrs_prestables_U.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_hrs_prestables_U.TabIndex = 16
+        Me.lbl_hrs_prestables_U.Text = "0"
+        '
         'form_payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1233, 646)
+        Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.lbl_nbr_jours_P)
         Me.Controls.Add(Me.Label34)
         Me.Controls.Add(Me.GroupBox10)
@@ -1219,7 +1231,6 @@ Partial Class form_payroll
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
-    Friend WithEvents txt_heures_prestables_U As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents lbl_bonusR As System.Windows.Forms.Label
@@ -1301,4 +1312,6 @@ Partial Class form_payroll
     Friend WithEvents lbl_heures_prestees_et_assimilees As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents lbl_nbre_jours_prestes_et_assimiles_J As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents lbl_hrs_prestables_U As Label
 End Class
