@@ -4,7 +4,7 @@
     ' test repo
 
     '-----------------------------------------------------------------------  A FAIRE ------------------------------------
-    ' faire le test sur fortemps/janvier car le R ne tombe pas juste
+    ' gérer le cas de lamy
 
     Const bonus_R_plancher As Double = 1674.49
     Const bonus_R_plafond As Double = 2611.78
@@ -16,6 +16,8 @@
 
 
     Private Sub bt_calculer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_calculer.Click
+        calcul_reduc_prp()
+        calcul_w()
         ' calcul du brut majoré si ouvrier
         If Me.rad_statut_ouvrier.Checked Then
             Me.lbl_brut_108.Text = calcul108(CDbl(Me.lbl_w.Text))
@@ -65,8 +67,7 @@
 
         Me.lbl_prp_base.Text = Me.txt_montant_prp.Text
 
-        calcul_reduc_prp()
-        calcul_w()
+
         Me.lbl_montant_total_frais_depl.Text = calcul_frais_deplacement()
 
         ' calcul du précompte final
