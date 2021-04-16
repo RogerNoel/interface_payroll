@@ -73,7 +73,7 @@
         If CDbl(Me.lbl_total_red_prp.Text) >= CDbl(Me.txt_montant_prp.Text) Then
             Me.lbl_prp_final.Text = 0
         Else
-            Me.lbl_prp_final.Text = CDbl(Me.txt_montant_prp.Text) - CDbl(Me.lbl_total_red_prp.Text)
+            Me.lbl_prp_final.Text = CDbl(Me.txt_montant_prp.Text) - CDbl(Me.lbl_total_red_prp.Text) + Me.txt_PrP_retenue_supplementaire.Text
         End If
 
         Me.lbl_brut_108_bis.Text = Me.lbl_brut_108.Text

@@ -135,6 +135,9 @@ Partial Class form_payroll
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.lbl_montant_total_frais_depl = New System.Windows.Forms.Label()
+        Me.GroupBox12 = New System.Windows.Forms.GroupBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.txt_PrP_retenue_supplementaire = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -493,6 +496,8 @@ Partial Class form_payroll
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.txt_PrP_retenue_supplementaire)
+        Me.GroupBox6.Controls.Add(Me.Label39)
         Me.GroupBox6.Controls.Add(Me.lbl_prp_final)
         Me.GroupBox6.Controls.Add(Me.Label20)
         Me.GroupBox6.Controls.Add(Me.lbl_total_red_prp)
@@ -513,7 +518,7 @@ Partial Class form_payroll
         'lbl_prp_final
         '
         Me.lbl_prp_final.AutoSize = True
-        Me.lbl_prp_final.Location = New System.Drawing.Point(135, 142)
+        Me.lbl_prp_final.Location = New System.Drawing.Point(135, 140)
         Me.lbl_prp_final.Name = "lbl_prp_final"
         Me.lbl_prp_final.Size = New System.Drawing.Size(13, 13)
         Me.lbl_prp_final.TabIndex = 10
@@ -522,7 +527,7 @@ Partial Class form_payroll
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(10, 142)
+        Me.Label20.Location = New System.Drawing.Point(10, 140)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(80, 13)
         Me.Label20.TabIndex = 9
@@ -531,7 +536,7 @@ Partial Class form_payroll
         'lbl_total_red_prp
         '
         Me.lbl_total_red_prp.AutoSize = True
-        Me.lbl_total_red_prp.Location = New System.Drawing.Point(135, 109)
+        Me.lbl_total_red_prp.Location = New System.Drawing.Point(135, 87)
         Me.lbl_total_red_prp.Name = "lbl_total_red_prp"
         Me.lbl_total_red_prp.Size = New System.Drawing.Size(13, 13)
         Me.lbl_total_red_prp.TabIndex = 8
@@ -540,7 +545,7 @@ Partial Class form_payroll
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(10, 109)
+        Me.Label24.Location = New System.Drawing.Point(10, 87)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(109, 13)
         Me.Label24.TabIndex = 7
@@ -549,7 +554,7 @@ Partial Class form_payroll
         'lbl_bareme
         '
         Me.lbl_bareme.AutoSize = True
-        Me.lbl_bareme.Location = New System.Drawing.Point(135, 43)
+        Me.lbl_bareme.Location = New System.Drawing.Point(135, 36)
         Me.lbl_bareme.Name = "lbl_bareme"
         Me.lbl_bareme.Size = New System.Drawing.Size(13, 13)
         Me.lbl_bareme.TabIndex = 6
@@ -558,7 +563,7 @@ Partial Class form_payroll
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(10, 43)
+        Me.Label14.Location = New System.Drawing.Point(10, 36)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(69, 13)
         Me.Label14.TabIndex = 5
@@ -575,16 +580,17 @@ Partial Class form_payroll
         '
         'txt_montant_prp
         '
-        Me.txt_montant_prp.Location = New System.Drawing.Point(135, 69)
+        Me.txt_montant_prp.Location = New System.Drawing.Point(139, 56)
         Me.txt_montant_prp.Name = "txt_montant_prp"
         Me.txt_montant_prp.Size = New System.Drawing.Size(61, 20)
         Me.txt_montant_prp.TabIndex = 3
         Me.txt_montant_prp.Text = "0"
+        Me.txt_montant_prp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(10, 72)
+        Me.Label12.Location = New System.Drawing.Point(10, 59)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(66, 13)
         Me.Label12.TabIndex = 1
@@ -1283,15 +1289,43 @@ Partial Class form_payroll
         Me.lbl_montant_total_frais_depl.AutoSize = True
         Me.lbl_montant_total_frais_depl.Location = New System.Drawing.Point(132, 91)
         Me.lbl_montant_total_frais_depl.Name = "lbl_montant_total_frais_depl"
-        Me.lbl_montant_total_frais_depl.Size = New System.Drawing.Size(25, 13)
+        Me.lbl_montant_total_frais_depl.Size = New System.Drawing.Size(13, 13)
         Me.lbl_montant_total_frais_depl.TabIndex = 4
-        Me.lbl_montant_total_frais_depl.Text = "000"
+        Me.lbl_montant_total_frais_depl.Text = "0"
+        '
+        'GroupBox12
+        '
+        Me.GroupBox12.Location = New System.Drawing.Point(755, 415)
+        Me.GroupBox12.Name = "GroupBox12"
+        Me.GroupBox12.Size = New System.Drawing.Size(242, 91)
+        Me.GroupBox12.TabIndex = 20
+        Me.GroupBox12.TabStop = False
+        Me.GroupBox12.Text = "Retenues"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(10, 111)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(122, 13)
+        Me.Label39.TabIndex = 11
+        Me.Label39.Text = "Retenue supplémentaire"
+        '
+        'txt_PrP_retenue_supplementaire
+        '
+        Me.txt_PrP_retenue_supplementaire.Location = New System.Drawing.Point(139, 108)
+        Me.txt_PrP_retenue_supplementaire.Name = "txt_PrP_retenue_supplementaire"
+        Me.txt_PrP_retenue_supplementaire.Size = New System.Drawing.Size(61, 20)
+        Me.txt_PrP_retenue_supplementaire.TabIndex = 12
+        Me.txt_PrP_retenue_supplementaire.Text = "0"
+        Me.txt_PrP_retenue_supplementaire.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'form_payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1267, 646)
+        Me.Controls.Add(Me.GroupBox12)
         Me.Controls.Add(Me.GroupBox11)
         Me.Controls.Add(Me.lbl_nbr_heures_feries)
         Me.Controls.Add(Me.Label36)
@@ -1457,4 +1491,7 @@ Partial Class form_payroll
     Friend WithEvents rad_frais_depl_hebdo As RadioButton
     Friend WithEvents rad_frais_depl_journalier As RadioButton
     Friend WithEvents lbl_montant_total_frais_depl As Label
+    Friend WithEvents txt_PrP_retenue_supplementaire As TextBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents GroupBox12 As GroupBox
 End Class
