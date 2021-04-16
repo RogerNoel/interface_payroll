@@ -127,6 +127,14 @@ Partial Class form_payroll
         Me.lbl_nbr_heures_prestees = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.lbl_nbr_jours_P = New System.Windows.Forms.Label()
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox()
+        Me.rad_frais_depl_journalier = New System.Windows.Forms.RadioButton()
+        Me.rad_frais_depl_hebdo = New System.Windows.Forms.RadioButton()
+        Me.rad_frais_depl_mensuel = New System.Windows.Forms.RadioButton()
+        Me.txt_montant_frais_deplacement = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.lbl_montant_total_frais_depl = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -138,6 +146,7 @@ Partial Class form_payroll
         Me.GroupBox9.SuspendLayout()
         Me.groupBox_regime_hebdo.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -191,9 +200,9 @@ Partial Class form_payroll
         Me.GroupBox2.Controls.Add(Me.lbl_onss)
         Me.GroupBox2.Controls.Add(Me.lbl_brut_108)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(794, 93)
+        Me.GroupBox2.Location = New System.Drawing.Point(1004, 93)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(217, 245)
+        Me.GroupBox2.Size = New System.Drawing.Size(217, 277)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Calculs base"
@@ -494,9 +503,9 @@ Partial Class form_payroll
         Me.GroupBox6.Controls.Add(Me.txt_montant_prp)
         Me.GroupBox6.Controls.Add(Me.Label12)
         Me.GroupBox6.Controls.Add(Me.Label13)
-        Me.GroupBox6.Location = New System.Drawing.Point(794, 344)
+        Me.GroupBox6.Location = New System.Drawing.Point(752, 224)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(220, 181)
+        Me.GroupBox6.Size = New System.Drawing.Size(246, 181)
         Me.GroupBox6.TabIndex = 9
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Précompte base"
@@ -1191,11 +1200,99 @@ Partial Class form_payroll
         Me.lbl_nbr_jours_P.TabIndex = 14
         Me.lbl_nbr_jours_P.Text = "0"
         '
+        'GroupBox11
+        '
+        Me.GroupBox11.Controls.Add(Me.lbl_montant_total_frais_depl)
+        Me.GroupBox11.Controls.Add(Me.Label38)
+        Me.GroupBox11.Controls.Add(Me.Label37)
+        Me.GroupBox11.Controls.Add(Me.txt_montant_frais_deplacement)
+        Me.GroupBox11.Controls.Add(Me.rad_frais_depl_mensuel)
+        Me.GroupBox11.Controls.Add(Me.rad_frais_depl_hebdo)
+        Me.GroupBox11.Controls.Add(Me.rad_frais_depl_journalier)
+        Me.GroupBox11.Location = New System.Drawing.Point(752, 93)
+        Me.GroupBox11.Name = "GroupBox11"
+        Me.GroupBox11.Size = New System.Drawing.Size(246, 119)
+        Me.GroupBox11.TabIndex = 19
+        Me.GroupBox11.TabStop = False
+        Me.GroupBox11.Text = "Frais de déplacement"
+        '
+        'rad_frais_depl_journalier
+        '
+        Me.rad_frais_depl_journalier.AutoSize = True
+        Me.rad_frais_depl_journalier.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.rad_frais_depl_journalier.Checked = True
+        Me.rad_frais_depl_journalier.Location = New System.Drawing.Point(7, 20)
+        Me.rad_frais_depl_journalier.Name = "rad_frais_depl_journalier"
+        Me.rad_frais_depl_journalier.Size = New System.Drawing.Size(70, 17)
+        Me.rad_frais_depl_journalier.TabIndex = 0
+        Me.rad_frais_depl_journalier.TabStop = True
+        Me.rad_frais_depl_journalier.Text = "Journalier"
+        Me.rad_frais_depl_journalier.UseVisualStyleBackColor = True
+        '
+        'rad_frais_depl_hebdo
+        '
+        Me.rad_frais_depl_hebdo.AutoSize = True
+        Me.rad_frais_depl_hebdo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.rad_frais_depl_hebdo.Location = New System.Drawing.Point(7, 43)
+        Me.rad_frais_depl_hebdo.Name = "rad_frais_depl_hebdo"
+        Me.rad_frais_depl_hebdo.Size = New System.Drawing.Size(94, 17)
+        Me.rad_frais_depl_hebdo.TabIndex = 0
+        Me.rad_frais_depl_hebdo.Text = "Hebdomadaire"
+        Me.rad_frais_depl_hebdo.UseVisualStyleBackColor = True
+        '
+        'rad_frais_depl_mensuel
+        '
+        Me.rad_frais_depl_mensuel.AutoSize = True
+        Me.rad_frais_depl_mensuel.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.rad_frais_depl_mensuel.Location = New System.Drawing.Point(7, 66)
+        Me.rad_frais_depl_mensuel.Name = "rad_frais_depl_mensuel"
+        Me.rad_frais_depl_mensuel.Size = New System.Drawing.Size(65, 17)
+        Me.rad_frais_depl_mensuel.TabIndex = 0
+        Me.rad_frais_depl_mensuel.Text = "Mensuel"
+        Me.rad_frais_depl_mensuel.UseVisualStyleBackColor = True
+        '
+        'txt_montant_frais_deplacement
+        '
+        Me.txt_montant_frais_deplacement.Location = New System.Drawing.Point(132, 41)
+        Me.txt_montant_frais_deplacement.Name = "txt_montant_frais_deplacement"
+        Me.txt_montant_frais_deplacement.Size = New System.Drawing.Size(71, 20)
+        Me.txt_montant_frais_deplacement.TabIndex = 1
+        Me.txt_montant_frais_deplacement.Text = "0"
+        Me.txt_montant_frais_deplacement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(145, 22)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(46, 13)
+        Me.Label37.TabIndex = 2
+        Me.Label37.Text = "Montant"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(10, 92)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(72, 13)
+        Me.Label38.TabIndex = 3
+        Me.Label38.Text = "Montant total:"
+        '
+        'lbl_montant_total_frais_depl
+        '
+        Me.lbl_montant_total_frais_depl.AutoSize = True
+        Me.lbl_montant_total_frais_depl.Location = New System.Drawing.Point(132, 91)
+        Me.lbl_montant_total_frais_depl.Name = "lbl_montant_total_frais_depl"
+        Me.lbl_montant_total_frais_depl.Size = New System.Drawing.Size(25, 13)
+        Me.lbl_montant_total_frais_depl.TabIndex = 4
+        Me.lbl_montant_total_frais_depl.Text = "000"
+        '
         'form_payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1267, 646)
+        Me.Controls.Add(Me.GroupBox11)
         Me.Controls.Add(Me.lbl_nbr_heures_feries)
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.lbl_nbre_jours_feries)
@@ -1241,6 +1338,8 @@ Partial Class form_payroll
         Me.groupBox_regime_hebdo.PerformLayout()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
+        Me.GroupBox11.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1350,4 +1449,12 @@ Partial Class form_payroll
     Friend WithEvents lbl_nbr_heures_prestees As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents lbl_nbr_jours_P As Label
+    Friend WithEvents GroupBox11 As GroupBox
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents txt_montant_frais_deplacement As TextBox
+    Friend WithEvents rad_frais_depl_mensuel As RadioButton
+    Friend WithEvents rad_frais_depl_hebdo As RadioButton
+    Friend WithEvents rad_frais_depl_journalier As RadioButton
+    Friend WithEvents lbl_montant_total_frais_depl As Label
 End Class

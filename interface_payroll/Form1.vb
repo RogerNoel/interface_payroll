@@ -67,6 +67,7 @@
 
         calcul_reduc_prp()
         calcul_w()
+        Me.lbl_montant_total_frais_depl.Text = calcul_frais_deplacement()
 
         ' calcul du précompte final
         If CDbl(Me.lbl_total_red_prp.Text) >= CDbl(Me.txt_montant_prp.Text) Then
@@ -442,4 +443,23 @@
         affichage_remun_txt()
     End Sub
 
+    Private Sub Label38_Click(sender As Object, e As EventArgs) Handles Label38.Click
+
+    End Sub
+
+    Private Sub GroupBox11_Enter(sender As Object, e As EventArgs) Handles GroupBox11.Enter
+
+    End Sub
+    Function calcul_frais_deplacement()
+        Dim montant As Double = 0
+        If Me.rad_frais_depl_mensuel.Checked = True Then
+            montant = Math.Round(Me.txt_montant_frais_deplacement.Text / Me.lbl_nbr_jrs_prestables_D.Text * Me.lbl_nbr_jours_P.Text, 2, MidpointRounding.AwayFromZero)
+        ElseIf Me.rad_frais_depl_hebdo.Checked = True Then
+            ' /!\ replacer le "3" par le nombre de jours de travail en semaine suivant régime
+            montant = Math.Round(txt_montant_frais_deplacement.Text / 3 * Me.lbl_nbr_jours_P.Text, 2, MidpointRounding.AwayFromZero)
+        ElseIf Me.rad_frais_depl_journalier.Checked = True Then
+            montant = Math.Round(Me.txt_montant_frais_deplacement.Text * Me.lbl_nbr_jours_P.Text, 2, MidpointRounding.AwayFromZero)
+        End If
+        Return montant
+    End Function
 End Class
