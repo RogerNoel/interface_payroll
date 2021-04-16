@@ -82,7 +82,7 @@
         Me.lbl_montant_csss.Text = Math.Round(calcul_CSSS(CDbl(Me.lbl_brut_108.Text)), 2, MidpointRounding.AwayFromZero)
 
         ' affichage du salaire net
-        Me.lbl_salaireNet.Text = CDbl(Me.lbl_imposable.Text) - CDbl(lbl_prp_final.Text) - CDbl(lbl_montant_csss.Text) + Me.lbl_montant_total_frais_depl.Text
+        Me.lbl_salaireNet.Text = CDbl(Me.lbl_imposable.Text) - CDbl(lbl_prp_final.Text) - CDbl(lbl_montant_csss.Text) + Me.lbl_montant_total_frais_depl.Text - Me.txt_montant_retenues_diverses.Text
 
     End Sub
 

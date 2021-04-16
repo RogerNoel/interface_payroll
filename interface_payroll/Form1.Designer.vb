@@ -138,6 +138,8 @@ Partial Class form_payroll
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.txt_PrP_retenue_supplementaire = New System.Windows.Forms.TextBox()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.txt_montant_retenues_diverses = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -150,6 +152,7 @@ Partial Class form_payroll
         Me.groupBox_regime_hebdo.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -1295,6 +1298,8 @@ Partial Class form_payroll
         '
         'GroupBox12
         '
+        Me.GroupBox12.Controls.Add(Me.txt_montant_retenues_diverses)
+        Me.GroupBox12.Controls.Add(Me.Label40)
         Me.GroupBox12.Location = New System.Drawing.Point(755, 415)
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.Size = New System.Drawing.Size(242, 91)
@@ -1319,6 +1324,24 @@ Partial Class form_payroll
         Me.txt_PrP_retenue_supplementaire.TabIndex = 12
         Me.txt_PrP_retenue_supplementaire.Text = "0"
         Me.txt_PrP_retenue_supplementaire.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(6, 28)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(88, 13)
+        Me.Label40.TabIndex = 0
+        Me.Label40.Text = "Retenues sur net"
+        '
+        'txt_montant_retenues_diverses
+        '
+        Me.txt_montant_retenues_diverses.Location = New System.Drawing.Point(137, 21)
+        Me.txt_montant_retenues_diverses.Name = "txt_montant_retenues_diverses"
+        Me.txt_montant_retenues_diverses.Size = New System.Drawing.Size(61, 20)
+        Me.txt_montant_retenues_diverses.TabIndex = 1
+        Me.txt_montant_retenues_diverses.Text = "0"
+        Me.txt_montant_retenues_diverses.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'form_payroll
         '
@@ -1374,6 +1397,8 @@ Partial Class form_payroll
         Me.GroupBox10.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.GroupBox11.PerformLayout()
+        Me.GroupBox12.ResumeLayout(False)
+        Me.GroupBox12.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1494,4 +1519,6 @@ Partial Class form_payroll
     Friend WithEvents txt_PrP_retenue_supplementaire As TextBox
     Friend WithEvents Label39 As Label
     Friend WithEvents GroupBox12 As GroupBox
+    Friend WithEvents txt_montant_retenues_diverses As TextBox
+    Friend WithEvents Label40 As Label
 End Class
