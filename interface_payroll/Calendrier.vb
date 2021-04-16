@@ -396,32 +396,42 @@
                     ' Je compte les .visible sinon le comptage ira toujours jusque 31
                     If GroupBox2.Controls("textBox" & i).Visible = True Then
                         nbr_jours_ouvrables += 1
-                        nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        'nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        nbr_hrs_prestables_D += 8
+
                     End If
 
                 Case "mar."
                     GroupBox2.Controls("TextBox" & i).Text = form_payroll.txt_regime_mardi.Text
                     If GroupBox2.Controls("textBox" & i).Visible = True Then
                         nbr_jours_ouvrables += 1
-                        nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        'nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        nbr_hrs_prestables_D += 8
+
                     End If
                 Case "mer."
                     GroupBox2.Controls("TextBox" & i).Text = form_payroll.txt_regime_mercredi.Text
                     If GroupBox2.Controls("textBox" & i).Visible = True Then
                         nbr_jours_ouvrables += 1
-                        nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        'nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        nbr_hrs_prestables_D += 8
+
                     End If
                 Case "jeu."
                     GroupBox2.Controls("TextBox" & i).Text = form_payroll.txt_regime_jeudi.Text
                     If GroupBox2.Controls("textBox" & i).Visible = True Then
                         nbr_jours_ouvrables += 1
-                        nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        'nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        nbr_hrs_prestables_D += 8
+
                     End If
                 Case "ven."
                     GroupBox2.Controls("TextBox" & i).Text = form_payroll.txt_regime_vendredi.Text
                     If GroupBox2.Controls("textBox" & i).Visible = True Then
                         nbr_jours_ouvrables += 1
-                        nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        'nbr_hrs_prestables_D += GroupBox2.Controls("TextBox" & i).Text
+                        nbr_hrs_prestables_D += 6
+
                     End If
                 Case "sam."
                     GroupBox2.Controls("TextBox" & i).Text = form_payroll.txt_regime_samedi.Text
@@ -434,6 +444,7 @@
         form_payroll.lbl_nbr_jrs_prestables_D.Text = nbr_jours_ouvrables
         form_payroll.lbl_nbre_heures_prestees_et_assimilees.Text = CDbl(form_payroll.lbl_nbr_heures_prestees.Text) + CDbl(form_payroll.lbl_nbr_heures_feries.Text)
         form_payroll.lbl_hrs_prestables_U.Text = nbr_hrs_prestables_D
+
     End Sub
 
 
