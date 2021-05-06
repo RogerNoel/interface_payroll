@@ -445,6 +445,7 @@
         form_payroll.lbl_nbre_heures_prestees_et_assimilees.Text = CDbl(form_payroll.lbl_nbr_heures_prestees.Text) + CDbl(form_payroll.lbl_nbr_heures_feries.Text) + CDbl(form_payroll.lbl_nbr_hrs_M1.Text
             )
         form_payroll.lbl_hrs_prestables_U.Text = nbr_hrs_prestables_D
+        form_payroll.lbl_non_soumis_onss.Text = Math.Round(form_payroll.txt_remun_ouv.Text * form_payroll.lbl_nbr_hrs_M2.Text * 0.8588, 2, MidpointRounding.AwayFromZero)
 
     End Sub
 
@@ -457,9 +458,11 @@
         Dim nbr_heures_prestees_P As Integer = 0
         Dim nbr_heures_feries_F As Integer = 0
         Dim nbr_heures_maladie_M1 As Integer = 0
+        Dim nbr_heures_maladie_M2 As Integer = 0
         Dim nbr_jours_F As Integer = 0
         Dim nbr_jours_P As Integer = 0
         Dim nbr_jours_M1 As Integer = 0
+        Dim nbr_jours_M2 As Integer = 0
         For i = 1 To 31
             Dim code As String = GroupBox2.Controls("txt_code_" & i).Text
             Select Case code
@@ -472,6 +475,9 @@
                 Case "m1"
                     nbr_jours_M1 += 1
                     nbr_heures_maladie_M1 += GroupBox2.Controls("TextBox" & i).Text
+                Case "m2"
+                    nbr_jours_M2 += 1
+                    nbr_heures_maladie_M2 += GroupBox2.Controls("TextBox" & i).Text
                 Case Else
                     'MsgBox("comptage")
             End Select
@@ -482,6 +488,8 @@
         form_payroll.lbl_nbr_heures_feries.Text = nbr_heures_feries_F
         form_payroll.lbl_nbr_jrs_M1.Text = nbr_jours_M1
         form_payroll.lbl_nbr_hrs_M1.Text = nbr_heures_maladie_M1
+        form_payroll.lbl_nbr_jrs_M2.Text = nbr_jours_M2
+        form_payroll.lbl_nbr_hrs_M2.Text = nbr_heures_maladie_M2
         form_payroll.lbl_nbre_jours_prestes_et_assimiles_J.Text = nbr_jours_F + nbr_jours_P + nbr_jours_M1
     End Sub
 

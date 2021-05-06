@@ -57,7 +57,7 @@
         End If
 
         ' calcul du montant imposable
-        Me.lbl_imposable.Text = calcul_imposable(Me.lbl_w.Text, Me.lbl_bonusP.Text, Me.lbl_onss.Text)
+        Me.lbl_imposable.Text = calcul_imposable(Me.lbl_w.Text, Me.lbl_bonusP.Text, Me.lbl_onss.Text) + Math.Round(Me.lbl_nbr_hrs_M2.Text * Me.txt_remun_ouv.Text * 0.8588, 2, MidpointRounding.AwayFromZero)
 
         ' calcul de la tranche de Prp
         Me.lbl_tranche_prp.Text = calcul_tranche_prp(Me.lbl_imposable.Text)
@@ -466,5 +466,13 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         form_codes.Show()
+    End Sub
+
+    Private Sub lbl_imposable_Click(sender As Object, e As EventArgs) Handles lbl_imposable.Click
+
+    End Sub
+
+    Private Sub Label46_Click(sender As Object, e As EventArgs) Handles lbl_non_soumis_onss.Click
+
     End Sub
 End Class
