@@ -25,8 +25,8 @@ Partial Class form_codes
         Me.lbl_code1 = New System.Windows.Forms.Label()
         Me.lbl_code1b = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,15 +61,6 @@ Partial Class form_codes
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Codes de prestations assimilées"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 48)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Férie"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -79,11 +70,20 @@ Partial Class form_codes
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "F"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(8, 48)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(30, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Férie"
+        '
         'form_codes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "form_codes"
         Me.Text = "Liste des codes"
