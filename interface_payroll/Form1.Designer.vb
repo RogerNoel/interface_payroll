@@ -141,6 +141,10 @@ Partial Class form_payroll
         Me.txt_montant_retenues_diverses = New System.Windows.Forms.TextBox()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_jrs_M1 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_hrs_M1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -1353,6 +1357,42 @@ Partial Class form_payroll
         Me.Button1.Text = "Afficher les codes"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(1027, 512)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(38, 13)
+        Me.Label41.TabIndex = 15
+        Me.Label41.Text = "Jrs M1"
+        '
+        'lbl_nbr_jrs_M1
+        '
+        Me.lbl_nbr_jrs_M1.AutoSize = True
+        Me.lbl_nbr_jrs_M1.Location = New System.Drawing.Point(1084, 512)
+        Me.lbl_nbr_jrs_M1.Name = "lbl_nbr_jrs_M1"
+        Me.lbl_nbr_jrs_M1.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_jrs_M1.TabIndex = 16
+        Me.lbl_nbr_jrs_M1.Text = "0"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(1122, 512)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(39, 13)
+        Me.Label43.TabIndex = 17
+        Me.Label43.Text = "hrs M1"
+        '
+        'lbl_nbr_hrs_M1
+        '
+        Me.lbl_nbr_hrs_M1.AutoSize = True
+        Me.lbl_nbr_hrs_M1.Location = New System.Drawing.Point(1195, 512)
+        Me.lbl_nbr_hrs_M1.Name = "lbl_nbr_hrs_M1"
+        Me.lbl_nbr_hrs_M1.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_hrs_M1.TabIndex = 18
+        Me.lbl_nbr_hrs_M1.Text = "0"
+        '
         'form_payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1361,9 +1401,13 @@ Partial Class form_payroll
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox12)
         Me.Controls.Add(Me.GroupBox11)
+        Me.Controls.Add(Me.lbl_nbr_hrs_M1)
         Me.Controls.Add(Me.lbl_nbr_heures_feries)
+        Me.Controls.Add(Me.Label43)
         Me.Controls.Add(Me.Label36)
+        Me.Controls.Add(Me.lbl_nbr_jrs_M1)
         Me.Controls.Add(Me.lbl_nbre_jours_feries)
+        Me.Controls.Add(Me.Label41)
         Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.lbl_nbr_jours_P)
         Me.Controls.Add(Me.Label34)
@@ -1533,4 +1577,8 @@ Partial Class form_payroll
     Friend WithEvents txt_montant_retenues_diverses As TextBox
     Friend WithEvents Label40 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label41 As Label
+    Friend WithEvents lbl_nbr_jrs_M1 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents lbl_nbr_hrs_M1 As Label
 End Class

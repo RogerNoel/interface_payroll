@@ -27,6 +27,8 @@ Partial Class form_codes
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,7 +44,7 @@ Partial Class form_codes
         'lbl_code1b
         '
         Me.lbl_code1b.AutoSize = True
-        Me.lbl_code1b.Location = New System.Drawing.Point(52, 27)
+        Me.lbl_code1b.Location = New System.Drawing.Point(90, 27)
         Me.lbl_code1b.Name = "lbl_code1b"
         Me.lbl_code1b.Size = New System.Drawing.Size(14, 13)
         Me.lbl_code1b.TabIndex = 1
@@ -50,6 +52,8 @@ Partial Class form_codes
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lbl_code1b)
@@ -64,7 +68,7 @@ Partial Class form_codes
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(52, 48)
+        Me.Label2.Location = New System.Drawing.Point(90, 48)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 3
@@ -77,7 +81,25 @@ Partial Class form_codes
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(30, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Férie"
+        Me.Label1.Text = "Férié"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(90, 70)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(22, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "M1"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(8, 70)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(73, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Maladie 100%"
         '
         'form_codes
         '
@@ -98,4 +120,6 @@ Partial Class form_codes
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
