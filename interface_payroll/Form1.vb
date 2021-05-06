@@ -463,4 +463,8 @@
         End If
         Return montant
     End Function
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        form_codes.Show()
+    End Sub
 End Class
