@@ -7,11 +7,11 @@
 
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click, Label7.Click
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click, Label7.Click, Label11.Click
 
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click, Label8.Click
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click, Label8.Click, Label12.Click
 
     End Sub
 End Class

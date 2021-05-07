@@ -57,8 +57,8 @@
         End If
 
         ' calcul du montant imposable
-        Me.lbl_imposable.Text = calcul_imposable(Me.lbl_w.Text, Me.lbl_bonusP.Text, Me.lbl_onss.Text) + Math.Round(Me.lbl_nbr_hrs_M2.Text * Me.txt_remun_ouv.Text * 0.8588, 2, MidpointRounding.AwayFromZero) + Math.Round(Me.lbl_nbr_hrs_M3.Text * Me.txt_remun_ouv.Text * 0.2588, 2, MidpointRounding.AwayFromZero
-                                                                                                                                                                                                                           )
+        Me.lbl_imposable.Text = calcul_imposable(Me.lbl_w.Text, Me.lbl_bonusP.Text, Me.lbl_onss.Text) + Math.Round(Me.lbl_nbr_hrs_M2.Text * Me.txt_remun_ouv.Text * 0.8588, 2, MidpointRounding.AwayFromZero) + Math.Round(Me.lbl_nbr_hrs_M3.Text * Me.txt_remun_ouv.Text * 0.2588, 2, MidpointRounding.AwayFromZero) + Math.Round(Me.lbl_nbr_hrs_AT2.Text * Me.txt_remun_ouv.Text * 0.8588, 2, MidpointRounding.AwayFromZero)
+
 
         ' calcul de la tranche de Prp
         Me.lbl_tranche_prp.Text = calcul_tranche_prp(Me.lbl_imposable.Text)

@@ -25,15 +25,19 @@ Partial Class form_codes
         Me.lbl_code1 = New System.Windows.Forms.Label()
         Me.lbl_code1b = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -58,7 +62,9 @@ Partial Class form_codes
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -70,24 +76,6 @@ Partial Class form_codes
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Codes de prestations assimilées"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(90, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(13, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "F"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 48)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Férié"
         '
         'Label3
         '
@@ -107,6 +95,24 @@ Partial Class form_codes
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Maladie 100%"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(90, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(13, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "F"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(8, 48)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(30, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Férié"
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -119,7 +125,7 @@ Partial Class form_codes
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(90, 28)
+        Me.Label6.Location = New System.Drawing.Point(100, 28)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(22, 13)
         Me.Label6.TabIndex = 5
@@ -129,7 +135,9 @@ Partial Class form_codes
         '
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Location = New System.Drawing.Point(195, 12)
         Me.GroupBox2.Name = "GroupBox2"
@@ -137,6 +145,15 @@ Partial Class form_codes
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Codes de maladies non soumis ONSS"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(100, 48)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(22, 13)
+        Me.Label8.TabIndex = 5
+        Me.Label8.Text = "M3"
         '
         'Label7
         '
@@ -147,14 +164,41 @@ Partial Class form_codes
         Me.Label7.TabIndex = 4
         Me.Label7.Text = "Maladie 25,88%"
         '
-        'Label8
+        'Label9
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(90, 48)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(22, 13)
-        Me.Label8.TabIndex = 5
-        Me.Label8.Text = "M3"
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(8, 91)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(80, 13)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "Ac. Trav. 100%"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(90, 91)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(27, 13)
+        Me.Label10.TabIndex = 5
+        Me.Label10.Text = "AT1"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(8, 70)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(89, 13)
+        Me.Label11.TabIndex = 4
+        Me.Label11.Text = "Ac. Trav. 85,88%"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(100, 70)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(27, 13)
+        Me.Label12.TabIndex = 5
+        Me.Label12.Text = "AT2"
         '
         'form_codes
         '
@@ -185,4 +229,8 @@ Partial Class form_codes
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
 End Class

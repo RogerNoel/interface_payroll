@@ -22,7 +22,6 @@ Partial Class form_payroll
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.rad_statut_employe = New System.Windows.Forms.RadioButton()
         Me.rad_statut_ouvrier = New System.Windows.Forms.RadioButton()
@@ -152,11 +151,18 @@ Partial Class form_payroll
         Me.lbl_nbr_jrs_M2 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
         Me.lbl_nbr_hrs_M2 = New System.Windows.Forms.Label()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Label46 = New System.Windows.Forms.Label()
         Me.lbl_nbr_jrs_M3 = New System.Windows.Forms.Label()
         Me.Label48 = New System.Windows.Forms.Label()
         Me.lbl_nbr_hrs_M3 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_jrs_AT1 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_hrs_AT1 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_jrs_AT2 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.lbl_nbr_hrs_AT2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -1461,12 +1467,6 @@ Partial Class form_payroll
         Me.lbl_nbr_hrs_M2.TabIndex = 18
         Me.lbl_nbr_hrs_M2.Text = "0"
         '
-        'ImageList1
-        '
-        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
-        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        '
         'Label46
         '
         Me.Label46.AutoSize = True
@@ -1503,6 +1503,78 @@ Partial Class form_payroll
         Me.lbl_nbr_hrs_M3.TabIndex = 18
         Me.lbl_nbr_hrs_M3.Text = "0"
         '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Location = New System.Drawing.Point(1027, 566)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(43, 13)
+        Me.Label47.TabIndex = 15
+        Me.Label47.Text = "Jrs AT1"
+        '
+        'lbl_nbr_jrs_AT1
+        '
+        Me.lbl_nbr_jrs_AT1.AutoSize = True
+        Me.lbl_nbr_jrs_AT1.Location = New System.Drawing.Point(1084, 566)
+        Me.lbl_nbr_jrs_AT1.Name = "lbl_nbr_jrs_AT1"
+        Me.lbl_nbr_jrs_AT1.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_jrs_AT1.TabIndex = 16
+        Me.lbl_nbr_jrs_AT1.Text = "0"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(1122, 566)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(44, 13)
+        Me.Label50.TabIndex = 17
+        Me.Label50.Text = "hrs AT1"
+        '
+        'lbl_nbr_hrs_AT1
+        '
+        Me.lbl_nbr_hrs_AT1.AutoSize = True
+        Me.lbl_nbr_hrs_AT1.Location = New System.Drawing.Point(1195, 566)
+        Me.lbl_nbr_hrs_AT1.Name = "lbl_nbr_hrs_AT1"
+        Me.lbl_nbr_hrs_AT1.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_hrs_AT1.TabIndex = 18
+        Me.lbl_nbr_hrs_AT1.Text = "0"
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Location = New System.Drawing.Point(1027, 583)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(43, 13)
+        Me.Label49.TabIndex = 15
+        Me.Label49.Text = "Jrs AT2"
+        '
+        'lbl_nbr_jrs_AT2
+        '
+        Me.lbl_nbr_jrs_AT2.AutoSize = True
+        Me.lbl_nbr_jrs_AT2.Location = New System.Drawing.Point(1084, 583)
+        Me.lbl_nbr_jrs_AT2.Name = "lbl_nbr_jrs_AT2"
+        Me.lbl_nbr_jrs_AT2.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_jrs_AT2.TabIndex = 16
+        Me.lbl_nbr_jrs_AT2.Text = "0"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Location = New System.Drawing.Point(1122, 583)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(44, 13)
+        Me.Label52.TabIndex = 17
+        Me.Label52.Text = "hrs AT2"
+        '
+        'lbl_nbr_hrs_AT2
+        '
+        Me.lbl_nbr_hrs_AT2.AutoSize = True
+        Me.lbl_nbr_hrs_AT2.Location = New System.Drawing.Point(1195, 583)
+        Me.lbl_nbr_hrs_AT2.Name = "lbl_nbr_hrs_AT2"
+        Me.lbl_nbr_hrs_AT2.Size = New System.Drawing.Size(13, 13)
+        Me.lbl_nbr_hrs_AT2.TabIndex = 18
+        Me.lbl_nbr_hrs_AT2.Text = "0"
+        '
         'form_payroll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1511,17 +1583,25 @@ Partial Class form_payroll
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox12)
         Me.Controls.Add(Me.GroupBox11)
+        Me.Controls.Add(Me.lbl_nbr_hrs_AT2)
+        Me.Controls.Add(Me.lbl_nbr_hrs_AT1)
         Me.Controls.Add(Me.lbl_nbr_hrs_M3)
         Me.Controls.Add(Me.lbl_nbr_hrs_M2)
         Me.Controls.Add(Me.lbl_nbr_hrs_M1)
         Me.Controls.Add(Me.lbl_nbr_heures_feries)
+        Me.Controls.Add(Me.Label52)
+        Me.Controls.Add(Me.Label50)
         Me.Controls.Add(Me.Label48)
         Me.Controls.Add(Me.Label45)
         Me.Controls.Add(Me.Label43)
+        Me.Controls.Add(Me.lbl_nbr_jrs_AT2)
+        Me.Controls.Add(Me.lbl_nbr_jrs_AT1)
         Me.Controls.Add(Me.lbl_nbr_jrs_M3)
         Me.Controls.Add(Me.lbl_nbr_jrs_M2)
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.lbl_nbr_jrs_M1)
+        Me.Controls.Add(Me.Label49)
+        Me.Controls.Add(Me.Label47)
         Me.Controls.Add(Me.Label46)
         Me.Controls.Add(Me.Label42)
         Me.Controls.Add(Me.lbl_nbre_jours_feries)
@@ -1705,9 +1785,16 @@ Partial Class form_payroll
     Friend WithEvents lbl_nbr_hrs_M2 As Label
     Friend WithEvents lbl_non_soumis_onss As Label
     Friend WithEvents Label44 As Label
-    Friend WithEvents ImageList1 As ImageList
     Friend WithEvents Label46 As Label
     Friend WithEvents lbl_nbr_jrs_M3 As Label
     Friend WithEvents Label48 As Label
     Friend WithEvents lbl_nbr_hrs_M3 As Label
+    Friend WithEvents Label47 As Label
+    Friend WithEvents lbl_nbr_jrs_AT1 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents lbl_nbr_hrs_AT1 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents lbl_nbr_jrs_AT2 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents lbl_nbr_hrs_AT2 As Label
 End Class

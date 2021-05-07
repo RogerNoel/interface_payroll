@@ -70,6 +70,10 @@ Labels
 	lbl_brut_108_bis : recopie de lbl_brut_108
 	lbl_montant_csss : montant de la taxe CSSS
 	lbl_salaireNet : salaire net final
+	lbl_nbr_jrs_AT1 : nombre de jours accident de travail phase 1
+	lbl_nbr_hrs_AT1 : nombre de heures accident de travail phase 1
+	lbl_nbr_jrs_AT2 : nombre de jours accident de travail phase 2
+	lbl_nbr_hrs_AT2 : nombre de heures accident de travail phase 2
 Cases à cocher
 	chk_veuf : Bénéficiaire veuf non remarié ou parent célibataire avec enfant(s) à charge
 	chk_beneficiaire_handic : travailleur handicapé

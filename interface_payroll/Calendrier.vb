@@ -442,10 +442,9 @@
             End Select
         Next
         form_payroll.lbl_nbr_jrs_prestables_D.Text = nbr_jours_ouvrables
-        form_payroll.lbl_nbre_heures_prestees_et_assimilees.Text = CDbl(form_payroll.lbl_nbr_heures_prestees.Text) + CDbl(form_payroll.lbl_nbr_heures_feries.Text) + CDbl(form_payroll.lbl_nbr_hrs_M1.Text
-            )
+        form_payroll.lbl_nbre_heures_prestees_et_assimilees.Text = CDbl(form_payroll.lbl_nbr_heures_prestees.Text) + CDbl(form_payroll.lbl_nbr_heures_feries.Text) + CDbl(form_payroll.lbl_nbr_hrs_M1.Text) + CDbl(form_payroll.lbl_nbr_hrs_AT1.Text)
         form_payroll.lbl_hrs_prestables_U.Text = nbr_hrs_prestables_D
-        form_payroll.lbl_non_soumis_onss.Text = Math.Round(form_payroll.txt_remun_ouv.Text * form_payroll.lbl_nbr_hrs_M2.Text * 0.8588, 2, MidpointRounding.AwayFromZero) + Math.Round(form_payroll.txt_remun_ouv.Text * form_payroll.lbl_nbr_hrs_M3.Text * 0.2588, 2, MidpointRounding.AwayFromZero)
+        form_payroll.lbl_non_soumis_onss.Text = Math.Round(form_payroll.txt_remun_ouv.Text * form_payroll.lbl_nbr_hrs_M2.Text * 0.8588, 2, MidpointRounding.AwayFromZero) + Math.Round(form_payroll.txt_remun_ouv.Text * form_payroll.lbl_nbr_hrs_M3.Text * 0.2588, 2, MidpointRounding.AwayFromZero) + Math.Round(form_payroll.lbl_nbr_hrs_AT2.Text * form_payroll.txt_remun_ouv.Text * 0.8588, 0, MidpointRounding.AwayFromZero)
 
     End Sub
 
@@ -465,6 +464,10 @@
         Dim nbr_jours_M1 As Integer = 0
         Dim nbr_jours_M2 As Integer = 0
         Dim nbr_jours_M3 As Integer = 0
+        Dim nbr_jrs_AT1 As Integer = 0
+        Dim nbr_jrs_AT2 As Integer = 0
+        Dim nbr_hrs_AT1 As Integer = 0
+        Dim nbr_hrs_AT2 As Integer = 0
         For i = 1 To 31
             Dim code As String = GroupBox2.Controls("txt_code_" & i).Text
             Select Case code
@@ -483,6 +486,12 @@
                 Case "m3"
                     nbr_jours_M3 += 1
                     nbr_heures_maladie_M3 += GroupBox2.Controls("TextBox" & i).Text
+                Case "at1"
+                    nbr_jrs_AT1 += 1
+                    nbr_hrs_AT1 += GroupBox2.Controls("TextBox" & i).Text
+                Case "at2"
+                    nbr_jrs_AT2 += 1
+                    nbr_hrs_AT2 += GroupBox2.Controls("TextBox" & i).Text
                 Case Else
                     'MsgBox("comptage")
             End Select
@@ -497,7 +506,11 @@
         form_payroll.lbl_nbr_hrs_M2.Text = nbr_heures_maladie_M2
         form_payroll.lbl_nbr_jrs_M3.Text = nbr_jours_M3
         form_payroll.lbl_nbr_hrs_M3.Text = nbr_heures_maladie_M3
-        form_payroll.lbl_nbre_jours_prestes_et_assimiles_J.Text = nbr_jours_F + nbr_jours_P + nbr_jours_M1
+        form_payroll.lbl_nbr_jrs_AT1.Text = nbr_jrs_AT1
+        form_payroll.lbl_nbr_hrs_AT1.Text = nbr_hrs_AT1
+        form_payroll.lbl_nbr_jrs_AT2.Text = nbr_jrs_AT2
+        form_payroll.lbl_nbr_hrs_AT2.Text = nbr_hrs_AT2
+        form_payroll.lbl_nbre_jours_prestes_et_assimiles_J.Text = nbr_jours_F + nbr_jours_P + nbr_jours_M1 + nbr_jrs_AT1
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
