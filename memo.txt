@@ -112,3 +112,27 @@ Boutons
 		lignes qui calculent le jour de la semaine qui correspond à la date du mois sélectionné et de l'année sélectionnée afin de remplir le calendrier
 		determination_jour()
         remplissage()
+
+Fonctions
+	calcul108(ByVal w As Double) As Double
+	calculONSS(ByVal wmaj As Double) As Double
+	calcul_S_tempsPleinIncomplet(ByVal w As Double, ByVal j As Integer, ByVal d As Integer) As Double
+	calcul_S_tempsPartiel(ByVal w As Double, ByVal h As Integer, ByVal u As Integer) As Double
+	calcul_R_employe(ByVal s As Double) As Double
+	calcul_R_ouvrier(ByVal s As Double) As Double
+	calcul_P_temps_plein_incomplet(ByVal j As Integer, ByVal d As Integer, ByVal r As Double) As Double
+	calcul_P_temps_partiel(ByVal h As Integer, ByVal u As Integer, ByVal r As Double) As Double
+	calcul_imposable(ByVal brut_soumis As Double, ByVal bonus_p As Double, ByVal montant_onss As Double) As Double
+	calcul_tranche_prp(ByVal imposable As Double) As Double
+	determination_bareme()
+	calcul_reduc_prp() As Double
+	calcul_CSSS(ByVal w108 As Double) As Double
+	verification_non_vide()
+	calcul_w()
+	affichage_remun_txt()
+	calcul_frais_deplacement()
+	determination_jour()
+	Isbissextile(maDate As Date) As Boolean
+	conversion_mois(mois) As Integer
+	remplissage()
+	comptage_codes()
