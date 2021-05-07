@@ -1,0 +1,114 @@
+Boutons radio
+	rad_statut_ouvrier : statut du travailleur
+	rad_statut_employe : statut du travailleur
+	rad_plein : régime de travail
+	rad_partiel : régime de travail
+	rad_isole : statut ménage: isolé
+	rad_men1rev : statut ménage : ménage 1 revenu
+	rad_men2rev : statut ménage : ménage 2 revenus
+	rad_frais_depl_journalier : choix d'indemnités de déplacement journalières
+	rad_frais_depl_hebdo : choix d'indemnités de déplacement hebdomadaires
+	rad_frais_depl_mensuel : choix d'indemnités de déplacement mensuelles
+Zones de texte
+	txt_remun_ouv : salaire horaire d'un ouvrier
+	txt_remun_emp : salaire mensuel d'un employé
+	txt_regime_lundi : heures à prester le lundi
+	txt_regime_mardi : heures à prester le mardi
+	txt_regime_mercredi : heures à prester le mercredi
+	txt_regime_jeudi : heures à prester le jeudi
+	txt_regime_vendredi : heures à prester le vendredi
+	txt_regime_samedi : heures à prester le samedi
+	txt_regime_dimanche : heures à prester le dimanche
+	txt_nbr_enfants : nombre total d'enfants
+	txt_nbr_enf_handic : nombre d'enfants handicapés à plus de 66%
+	txt_65plus_charge : nombre de personnes de plus de 65 ans à charge
+	txt_65moins_charge : nombre de personnes de maximum 65 ans à charge
+	txt_montant_frais_deplacement : montant unitaire des indemnités de déplacement
+	txt_montant_prp : montant du précompte à payer selon barème
+	txt_PrP_retenue_supplementaire : montant de retenue volontaire sur précompte professionnel
+	txt_montant_retenues_diverses : montant des retenues sur salaire
+	txt_annee : année en cours (défaut année en cours)
+	TextBox1 à TextBox31: cases remplies automatiquement par les heures à prester selon le jour de la semaine
+	txt_code_1 à txt_code_31 : cases à remplir pour insérer les codes du mois
+Labels
+	lbl_nbre_jours_prestes_et_assimiles_J : nombre total de jours prestés et assimilés
+	lbl_nbr_jrs_prestables_D : nombre total de jours ouvrables (ou prestables)
+	lbl_nbre_heures_prestees_et_assimilees : nombre total d'heures des jours prestés ou assimilés
+	lbl_hrs_prestables_U : nombre total d'heures des jours ouvrables
+	lbl_red_prp_isole : montant de la réduction pour travailleur isolé
+	lbl_red_prp_enfants : montant de la réduction pour enfants à charge
+	lbl_veuf : montant de la réduction pour travailleur veuf non remarié OU parent célibataire avec enfants à charge
+	lbl_beneficiaire_handicape : montant de la réduction pour travailleur handicapé
+	lbl_65plus_charge : montant de la réduction pour autres peronnes à charge
+	lbl_conjoint_rev_235moins : montant de la réduction pour conjoint avec revenus autres que pensions et inférieurs à 233 euros net par mois
+	lbl_conjoint_pensions_469_mois : montant de la réduction pour conjoint avec revenus qui sont exclusivement des pensions, rentes ou assimilés et inférieurs à 466 euros net par mois
+	lbl_reduc_prp_33pc : réduction de précompte de 33,14% du plus petit montant (P ou montant ONSS)
+	lbl_tranche_prp : calcul de la base 15 pour le barème du précompte professionnel
+	lbl_bareme : barème à utiliser (1 ou 2)
+	lbl_total_red_prp : montant total des réductions de précompte
+	lbl_montant_total_frais_depl : montant total des indemnités de déplacement
+	lbl_prp_final: montant du précompte final à payer
+	lbl_w : montant du brut W (salaire adapté)
+	lbl_brut_108 : montant de W 108%
+	lbl_onss : montant de base de l'ONSS avant réductions
+	lbl_S : montant du salaire de référence recalculé S
+	lbl_bonusR : montant du bonus R pour réduction ONSS
+	lbl_bonusP : montant du bonus R adapté aux prestations effectives (P)
+	lbl_non_soumis_onss : total des montants non soumis à l'ONSS (à ajouter à l'imposable)
+	lbl_imposable : montant imposable
+	lbl_prp_base : recopie de txt_montant_prp
+	lbl_nbr_jours_P : nombre de jours prestés dans le calendrier
+	lbl_nbr_heures_prestees : nombre d'heures prestées dans le calendrier
+	lbl_nbre_jours_feries : nombre de jours fériés dans le calendrier
+	lbl_nbr_heures_feries : nombre d'heures fériés dans le calendrier
+	lbl_nbr_jrs_M1 : nombre de jours de maladie 100% dans le calendrier
+	lbl_nbr_jrs_M2 : nombre de jours de maladie 85,88% dans le calendrier
+	lbl_nbr_jrs_M3 : nombre de jours de maladie 25,88% dans le calendrier
+	lbl_nbr_hrs_M1 : nombre d'heures de maladie 100% dans le calendrier
+	lbl_nbr_hrs_M2 : nombre d'heures de maladie 85,88% dans le calendrier
+	lbl_nbr_hrs_M3 : nombre d'heures de maladie 25,88% dans le calendrier
+	lbl_brut_108_bis : recopie de lbl_brut_108
+	lbl_montant_csss : montant de la taxe CSSS
+	lbl_salaireNet : salaire net final
+Cases à cocher
+	chk_veuf : Bénéficiaire veuf non remarié ou parent célibataire avec enfant(s) à charge
+	chk_beneficiaire_handic : travailleur handicapé
+	chk_conjoint_rev_235moins : conjoint avec revenus autres que pensions et inférieurs à 233 euros net par mois
+	chk_conjoint_pensions_469_mois : conjoint avec revenus qui sont exclusivement des pensions, rentes ou assimilés et inférieurs à 466 euros net par mois
+Groupboxes
+	GroupBox1 : statut travailleur
+	GroupBox3 : régime de travail
+	GroupBox4 : prestations en jours et jours prestables
+	GroupBox5 : prestations en heures et heures prestables
+	GroupBox6 : précompte
+	GroupBox7 : statut du ménage
+	GroupBox8 : calcul CSSS
+	GroupBox9 : montant net
+	GroupBox10 : rémunération contrat
+	GroupBox11 : frais de déplacement
+	GroupBox12 : retenues sur salaire
+	groupBox_regime_hebdo : régime hebdomadaire de travail
+Listes
+	cmb_mois : liste des mois de l'année (défaut: mois en cours)
+Boutons
+	bt_calculer
+		calcul_reduc_prp()
+        calcul_w()
+		calcul du brut majoré si ouvrier
+		assignation du montant ONSS dans le label
+		calcul de S suivant les 3 cas possibles
+		calcul de R du travailleur
+		calcul de P
+		calcul du montant imposable
+		calcul de la tranche de Prp
+		détermination du barème PrP
+		calcul du précompte final
+		calcul de la taxe CSSS
+		affichage du salaire net
+	btn_calendrier_envoyer
+		comptage_codes()
+        remplissage()
+	btn_calendrier_executer
+		lignes qui calculent le jour de la semaine qui correspond à la date du mois sélectionné et de l'année sélectionnée afin de remplir le calendrier
+		determination_jour()
+        remplissage()
